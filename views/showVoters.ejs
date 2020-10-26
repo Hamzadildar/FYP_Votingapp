@@ -1,0 +1,39 @@
+<%- include ('partials/authorityheader') %>
+
+
+<div class="container bg-white">
+  <h2>Voters List</h2>
+  <table class="table table-bordered ">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>CNIC</th>
+        <th>Contact</th>
+        <th>Status</th>
+        <th>Hash</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%for(var i=1;i<data.length;i++){%>
+      <tr>
+        <td><%=i%></td>
+        <td><%=data[i].data.Name%></td>
+        <td><%=data[i].data.CNIC%></td>
+        <td>03047877535</td>
+        <td><%=data[i].blockStatus%></td>
+        <td><%=data[i].hash%></td>
+        <td><a href="#">Edit</a></td>
+      </tr>
+      <%}%>
+
+      
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<%- include ('partials/footer') %>

@@ -1,0 +1,114 @@
+<%- include ('partials/authorityheader') %>
+
+
+<!-- <div class="col-md-8 mx-auto my-5">
+  <h1>Add Voter In Polling: <%= msg %> </h1>
+  <form action="/createVoter" method="post">
+    <div class="form-group">
+      <label >Polling Name</label>
+      <input type="text" name="blockChainName" value="<%=bcName%>" class="form-control"placeholder="Enter Polling Name" readonly>
+    </div>
+    <div class="form-group">
+      <label >Voter Name</label>
+      <input type="text" name="Name" class="form-control"placeholder="Enter Voter Name">
+    </div>
+    <div class="form-group">
+      <label >CNIC</label>
+      <input type="text" name="CNIC" class="form-control"placeholder="Enter CNIC">
+    </div>
+    <div class="form-group">
+      <label >Key</label>
+      <input type="password" name="Key" class="form-control"placeholder="Enter key">
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+  <form action="/createVotersFromFile" method="post">
+    
+    <div class="form-group">
+      <label >Voting List</label>
+      <input type="file" name="listfile" class="form-control"placeholder="Enter key">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+ -->
+
+
+<section class="form my-4 mx-5">
+  <div class="container">
+      <div class="row no-gutters">
+          <div class="col-lg-5">
+              <img src="./form.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-7 px-5 pt-5">
+              <h1 class="font-weight-bold py-3">Add Voters In Polling ! <%= msg %></h1>
+              
+
+              <form action="createVoter" method="POST">
+
+
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <input type="text" placeholder="PollingName"  name="blockChainName" value="<%=bcName%>" class="form-control my-2 p-3" required>
+                      </div>
+                  </div>
+
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <input type="text" placeholder="Voter Name" name="Name" class="form-control my-2 p-3" required>
+                      </div>
+                  </div>
+
+
+
+                  <div class="form-row">
+                      <div class="col-lg-7">
+
+                          <input type="text" class="form-control my-2 p-3"
+                               required minlength="13" maxlength="13"
+                              placeholder="CNIC" name="CNIC">
+
+                      </div>
+                  </div>
+
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <input type="Password" name="Key" placeholder="Enter Key" class="form-control my-2 p-3" required>
+                      </div>
+                  </div>
+
+
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <button type="submit" class="btn1 mt-2 mb-3"> Submit </button>
+                      </div>
+                  </div>
+
+              </form>
+              <form action="/createVotersFromFile" method="POST">
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <strong>Voter List:</strong><input type="file" name="listfile" class="form-control-file my-1 p-2"
+                              required>
+                      </div>
+                  </div>
+
+
+
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <button type="submit" class="btn1 mt-2 mb-2"> Submit </button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<%- include ('partials/footer') %>
